@@ -1,0 +1,9 @@
+---
+
+- name: Accept Java 8 License
+  become: yes
+  debconf: name='oracle-java8-installer' question='shared/accepted-oracle-license-v1-1' value='true' vtype='select'
+
+- name: Install java
+  apt_repository: repo=ppa:webupd8team/java state=present
+- apt: name=oracle-java8-installer update_cache=yes

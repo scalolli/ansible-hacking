@@ -13,6 +13,11 @@
 
   roles:
     - vlc
+    - java
+
+  tasks:
+    - name: some name
+      debug: msg="My phone's model is {{phone_model}}"
 
   post_tasks:
     - shell: echo 'after rules'
