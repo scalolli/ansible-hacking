@@ -1,0 +1,7 @@
+- name: another play
+  hosts: local
+
+  tasks:
+  - name: first task
+    debug: msg="From first task of second play"
+  - homebrew: name=foo path=/my/other/location/bin state=present
